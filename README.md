@@ -129,11 +129,6 @@ public class UploadsAction {
     private String[] faceContentType;
     public String execute(){
 
-
-        //System.out.println(faceFileName);
-        //System.out.println(faceContentType);
-        //System.out.println(author);
-        //System.out.println(face.length());
         try{
             SimpleDateFormat sdf = new SimpleDateFormat("yyMM");
             String path = ServletActionContext.getServletContext().getRealPath("/upload/"+sdf.format(new Date()));
@@ -158,11 +153,12 @@ public class UploadsAction {
 # struts.xml 添加如下配置
 
 
- <action name="uploads" class="com.action.UploadsAction"/>
+ # <action name="uploads" class="com.action.UploadsAction"/>
  
  
  
  # Struts2.x实现文件上传与下载
+ -----------------------------------------------
 
 package com.action;
 import com.opensymphony.xwork2.ActionSupport;
@@ -191,8 +187,8 @@ public class DownAction extends ActionSupport{
 
 
 struts.xml 配置action
+-------------------------------------------
 
-        <!-- 文件下载 -->
         <action name="down" class="com.action.DownAction">
             <param name="path">/download</param>
             <result name="success" type="stream">
@@ -205,7 +201,13 @@ struts.xml 配置action
 
 
 
-使用时 jsp文件
-<a href="down.action?filename=a.jpg" download>图片下载</a>  
+jsp 代码
+----------------------------------------
+#　<a href="down.action?filename=a.jpg" download>图片下载</a> 
+
+
 下载的是服务器中 /download/a.jpg
+
+
  
+# 　　若有不清楚之处请看源码
