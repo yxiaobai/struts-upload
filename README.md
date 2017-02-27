@@ -26,9 +26,6 @@ src/main/java/com/actioin/UploadAction.java
 	import java.text.SimpleDateFormat;
 	import java.util.Date;
 
-	/**
-	 * Created by webrx on 2017/2/27 0027 9:07.
-	 */
 	@Data
 	public class UploadAction{
 	    private String author;
@@ -111,7 +108,7 @@ upm.jsp
 	</form>
 
 
-UploadsAction
+
 package com.action;
 
 import lombok.Data;
@@ -122,9 +119,6 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by webrx on 2017/2/27 0027 9:07.
- */
 @Data
 public class UploadsAction {
     private String author;
