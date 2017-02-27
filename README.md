@@ -61,15 +61,16 @@ src/main/java/com/actioin/UploadAction.java
 
 
 	}
-struts.xml 添加如下配置
-src/main/resources/struts.xml
--------------------------------------------
+	
+	
+# struts.xml 添加如下配置
+
   <package name="reg" extends="struts-default" namespace="/">
         <action name="upload" class="com.action.UploadAction"/>
   </package>
 
 
-src/main/webapp/upfileinof.jsp
+ jsp 代码
 -------------------------------------------
 	<%@ page language="java" pageEncoding="utf-8" %>
 	<%@ taglib prefix="s" uri="/struts-tags" %>
@@ -99,13 +100,14 @@ src/main/webapp/upfileinof.jsp
 
 # struts 2.5.10 多文件上传
 ---------------------------------------------------
-upm.jsp
+jsp代码
 	<h3>多文件上传</h3>
 	<form action="uploads.action" method="post" enctype="multipart/form-data">
 	    姓名: <input type="text" name="author"><br>
 	    文件：<input type="file" name="face" multiple><br>
 	    <input type="submit" value="多文件">
 	</form>
+
 
 
 
@@ -153,7 +155,9 @@ public class UploadsAction {
 
 }
 
-struts.xml 添加如下配置
+# struts.xml 添加如下配置
+
+
  <action name="uploads" class="com.action.UploadsAction"/>
  
  
